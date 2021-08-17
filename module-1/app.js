@@ -8,7 +8,7 @@
         var arr=[],c=0;
         $scope.Check_If_Too_Much=function()
         {
-          if($scope.name==undefined)
+          if($scope.name==undefined || $scope.name=='')
           $scope.value='Please enter data first';
           else{
           arr=$scope.name.split(',');
