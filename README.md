@@ -1,2 +1,2 @@
 # Angular-project
-Angular Project
+Small chunks Web-applications using AngularJS
