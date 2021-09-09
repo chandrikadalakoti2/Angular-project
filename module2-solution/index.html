@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2 solution</title>
+</head>
+<body ng-app='ShoppingListCheckOff'>
+    <div ng-controller='ToBuyController as Buylist'>
+        <h3>To Buy</h3>
+        <ul>
+            <li ng-repeat='item in Buylist.items'>
+                Buy {{item.name}} {{item.quantity}}
+                <button ng-click='Buylist.removeItem($index);'>Bought</button>
+            </li>
+        </ul>
+        <div ng-if='Buylist.errormessage'>{{Buylist.errormessage}}</div>
+    </div>
+    <div ng-controller='AlreadyBoughtController as Boughtlist'>
+        <h3>Already Bought</h3>
+        <ul>
+            <li ng-repeat='item in Boughtlist.items1'>
+                Bought {{item.name}} {{item.quantity}}
+            </li>
+        </ul>
+        <div ng-if='!Boughtlist.items1.length'>{{Boughtlist.errormessage}}</div>
+    </div>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
